@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+		title="MongoDB"
+		width="1280"
+		height="720" 
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+		
+<hbox>
+	<menubar>
+		<menu type="menu" label="Connect">
+			<menupopup>
+				<menuitem label="Connect to..."/>
+				<menuitem label="Disconect"/>
+				<menuseparator/>
+				<menuitem label="Exit"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="View">
+			<menupopup>
+				<menuitem label="Reload"/>
+				<menuitem label="Reload Data"/>
+				<menuseparator/>
+				<menuitem label="Actual Size"/>
+				<menuitem label="Zoom In"/>
+				<menuitem label="Zoom Out"/>
+				<menuseparator/>
+				<menuitem label="Toggle Dev Tools"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="Help">
+			<menupopup>
+				<menuitem label="Online Help"/>
+				<menuitem label="MongoDB Overview"/>
+				<menuitem label="Privacy Settings"/>
+				<menuitem label="Pluggins"/>
+				<menuseparator/>
+				<menuitem label="About MongoDB Compass"/>
+			</menupopup>
+		</menu>
+	</menubar>
+</hbox>
+		
+<hbox>
+	
+	<vbox style = "height:720px; width:280px; background-color:#4C5259; font-size:20px;">
+		<vbox style="height:72px; width:280px; background-color:#6D7984">
+		<spacer flex = "1"/>
+		<description style = "text-align:center; margin:20px; font-size:24px; color:white; font-weight:bold;" >
+				My Cluster
+		</description>
+		</vbox>
+		<textbox style="margin-top:10px;" value="Search"/> 
+		<button type="menu" style="margin-top:10px;" label="admin">
+			<menupopup>
+				<menuitem label=" " />
+			</menupopup>
+		</button>
+		<button type="menu" label="local">
+			<menupopup>
+				<menuitem label="startup_log" />
+			</menupopup>
+		</button>
+		<button type="menu" label="online_shop">
+			<menupopup>
+				<menuitem label="basket" />
+				<menuitem label="basket_order" />
+				<menuitem label="customers" />
+				<menuitem label="benefit" />
+				<menuitem label="manufacture" />
+				<menuitem label="products" />
+				<menuitem label="category" />
+			</menupopup>
+		</button>
+	</vbox>
+	
+	<vbox style = "height:720px; width:1000px; background-color:#FFFFFF;">
+	
+		<vbox style="height:72px; width:1000px; background-color:#F5F6F7;">
+			<description style = "margin:10px; font-size:18px; color:grey; font-weight:bold;">
+				localhost:27017
+			</description>
+			<tabbox>
+				<tabs style="font-size:18px;">
+					<tab label="Database"/>
+					<tab label="Performance"/>
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<vbox style="height:648px; width:1000px">
+							<button label="Create Database" style="color:green; margin-left:5px;
+							margin-right:850px; margin-bottom:10px; font-size:14px; font-weight:bold;"/>
+						
+							<tree id="myTree" flex="1" hidecolumnpicker="false" style="margin-bottom:500px;"
+							seltype="single" class="tree" rows="3">
+								<treecols>
+									<treecol primary="true" flex="1" label="Database Name"/>
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Storage Size" />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Collections"  />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Indexes"  />
+								</treecols>
+								<treechildren>
+									<treeitem>
+										<treerow>
+											<treecell label="admin"/>
+											<treecell label="16.0KB"/>
+											<treecell label="0"/>
+											<treecell label="2"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="local"/>
+											<treecell label="40.0KB"/>
+											<treecell label="1"/>
+											<treecell label="1"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="online_shop"/>
+											<treecell label="156.0KB"/>
+											<treecell label="8"/>
+											<treecell label="8"/>
+										</treerow>
+									</treeitem>
+								</treechildren>
+							</tree>
+						</vbox>
+					</tabpanel>
+						<vbox style="height:648px; width:1000px">
+							<button label="Pause" style="color:grey; margin-left:5px;
+							margin-right:850px; margin-bottom:10px; font-size:14px; font-weight:bold;"/>
+							<image src='dia.png' />
+						</vbox>
+					<tabpanel>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</vbox>
+	</vbox>
+</hbox>
+</window>

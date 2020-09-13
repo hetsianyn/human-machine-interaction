@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+		title="Create Database"
+		width="500"
+		height="370" 
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+		
+<vbox>
+	<vbox style = "background-color:green;">
+		<description 
+		style = "text-align:left; margin:20px; color:white; font-size:24px; font-weight:bold;" >
+				Create Collection
+		</description>
+	</vbox>
+	
+	<description 
+	style = " margin-top:15px; text-align:left; font-size:14px; font-weight:bold;" >
+				Collection Name
+	</description>
+	<textbox style="margin-bottom:10px;"/>
+	<checkbox label="Capped Collection" 
+	style="margin-top:15px; text-align:left;font-size:14px; font-weight:bold;"/>
+	<checkbox label="Use Custom Collation" 
+	style="margin-top:15px; text-align:left;font-size:14px; font-weight:bold;"/>
+	
+	<hbox style="margin-top:50px;">
+		<button label="Cancel" style="color:grey; 
+		margin-left:250px; font-size:14px; font-weight:bold;"/>
+		<button label="Create Collection" style="
+		color:green; font-size:14px; font-weight:bold;"/>
+	</hbox>
+</vbox>
+</window>

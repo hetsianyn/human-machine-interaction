@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+		title="Notion"
+		width="1280"
+		height="720" 
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+		<script type="application/javascript" src="chrome://labka/content/main.js"/>
+		
+<hbox>
+	<menubar>
+		<menu type="menu" label="File">
+			<menupopup>
+				<menuitem label = "New window"/>
+				<menuitem label = "Exit"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="Edit">
+			<menupopup>
+				<menuitem label = "Undo"/>
+				<menuitem label = "Redo"/>
+				<separator/>
+				<menuitem label = "New window"/>
+				<menuitem label = "Exit"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="">
+			<menupopup>
+				
+			</menupopup>
+		</menu>
+	</menubar>
+</hbox>
+		
+
+</window>

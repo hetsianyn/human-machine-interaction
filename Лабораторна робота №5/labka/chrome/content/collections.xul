@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+		title="MongoDB"
+		width="1280"
+		height="720" 
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+		
+<hbox>
+	<menubar>
+		<menu type="menu" label="Connect">
+			<menupopup>
+				<menuitem label="Connect to..."/>
+				<menuitem label="Disconect"/>
+				<menuseparator/>
+				<menuitem label="Exit"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="View">
+			<menupopup>
+				<menuitem label="Reload"/>
+				<menuitem label="Reload Data"/>
+				<menuseparator/>
+				<menuitem label="Actual Size"/>
+				<menuitem label="Zoom In"/>
+				<menuitem label="Zoom Out"/>
+				<menuseparator/>
+				<menuitem label="Toggle Dev Tools"/>
+			</menupopup>
+		</menu>
+		<menu type="menu" label="Help">
+			<menupopup>
+				<menuitem label="Online Help"/>
+				<menuitem label="MongoDB Overview"/>
+				<menuitem label="Privacy Settings"/>
+				<menuitem label="Pluggins"/>
+				<menuseparator/>
+				<menuitem label="About MongoDB Compass"/>
+			</menupopup>
+		</menu>
+	</menubar>
+</hbox>
+		
+<hbox>
+	
+	<vbox style = "height:720px; width:280px; background-color:#4C5259; font-size:20px;">
+		<vbox style="height:72px; width:280px; background-color:#6D7984">
+		<spacer flex = "1"/>
+		<description style = "text-align:center; margin:20px; font-size:24px; color:white; font-weight:bold;" >
+				My Cluster
+		</description>
+		</vbox>
+		<textbox style="margin-top:10px;" value="Search"/> 
+		<button type="menu" style="margin-top:10px;" label="admin">
+			<menupopup>
+				<menuitem label=" " />
+			</menupopup>
+		</button>
+		<button type="menu" label="local">
+			<menupopup>
+				<menuitem label="startup_log" />
+			</menupopup>
+		</button>
+		<button type="menu" label="online_shop">
+			<menupopup>
+				<menuitem label="basket" />
+				<menuitem label="basket_order" />
+				<menuitem label="customers" />
+				<menuitem label="benefit" />
+				<menuitem label="manufacture" />
+				<menuitem label="products" />
+				<menuitem label="category" />
+			</menupopup>
+		</button>
+	</vbox>
+	
+	<vbox style = "height:720px; width:1000px; background-color:#FFFFFF;">
+	
+		<vbox style="height:72px; width:1000px; background-color:#F5F6F7;">
+			<description style = "margin:10px; font-size:18px; color:grey; font-weight:bold;">
+				localhost:27017
+			</description>
+			<tabbox>
+				<tabs style="font-size:18px;">
+					<tab label="Collections"/>
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<vbox style="height:648px; width:1000px">
+							<button label="Create Collection" style="color:green; margin-left:5px;
+							margin-right:850px; margin-bottom:10px; font-size:14px; font-weight:bold;"/>
+						
+							<tree id="myTree" flex="1" hidecolumnpicker="false" style="margin-bottom:300px;"
+							seltype="single" class="tree" rows="3">
+								<treecols>
+									<treecol primary="true" flex="1" label="Collection Name"/>
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Documents" />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Avg.Document Size"  />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Total Document Size"  />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Num. Indexes"/>
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Total Inedx Size"  />
+									<splitter class="tree-splitter"/>
+									<treecol flex="1" label="Properties"  />
+								</treecols>
+								<treechildren>
+									<treeitem>
+										<treerow>
+											<treecell label="basket"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="basket_order"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="benefit"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="benefit_order"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="category"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="customer"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="manufacture"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+									<treeitem container="true" open="true">
+										<treerow>
+											<treecell label="products"/>
+											<treecell label="7"/>
+											<treecell label="146.06 B"/>
+											<treecell label="984.0 B"/>
+											<treecell label="1"/>
+											<treecell label="16.0 KB"/>
+											<treecell label="Collation"/>
+										</treerow>
+									</treeitem>
+								</treechildren>
+							</tree>
+						</vbox>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</vbox>
+	</vbox>
+</hbox>
+</window>
